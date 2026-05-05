@@ -1,7 +1,7 @@
 {
   "name": "tic-tac-toe-game",
   "version": "0.1.0",
-  "homepage": "https://github.com/Huuchau66/tic-tac-toe-Game",
+  "homepage": "https://huuchau66.github.io/tic-tac-toe-Game",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
