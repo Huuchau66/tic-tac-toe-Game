@@ -24,7 +24,7 @@ function App() {
   } else if (giatrimoi.every(cell=>cell!==null)){
     setThongbao("Ket qua: Hoa")
   } 
-  else setThongbao("Luot tiep theo:"+ (!tieptheo ? "X" : "O"))
+  else setThongbao("Luot tiep theo:"+ (tieptheo % 2 ===0 ? "X" : "O"))
 }
 
   const nguoithang = (board) =>{
@@ -59,7 +59,10 @@ const quaylai = () => {
 
   setNuocdi(newStep);
   setTieptheo(newStep % 2 === 0);
+  setThongbao("Luot tiep theo:"+ (tieptheo % 2 ===0 ? "X" : "O"))
+  
 };
+
   return (
     <div className='container'>
     <div className='box'>
@@ -71,7 +74,7 @@ const quaylai = () => {
     <button className='undo' onClick={quaylai}>Undo</button>
     </div>
     </div>
-   <History giatrio={giatrio} setNuocdi={setNuocdi} setTieptheo={setTieptheo}/>
+   <History giatrio={giatrio} setNuocdi={setNuocdi} setTieptheo={setTieptheo} tieptheo={tieptheo} setThongbao={setThongbao}/>
     </div>
     </div>
   )

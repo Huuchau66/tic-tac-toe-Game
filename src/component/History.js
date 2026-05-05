@@ -1,6 +1,6 @@
 import React from 'react'
 
-function History({ giatrio, setNuocdi, setTieptheo }) {
+function History({ giatrio, setNuocdi, setTieptheo, tieptheo,setThongbao}) {
   return (
     <div className='history'>
       {giatrio.map((step, move) => (
@@ -9,6 +9,7 @@ function History({ giatrio, setNuocdi, setTieptheo }) {
           onClick={() => {
             setNuocdi(move);
             setTieptheo(move % 2 === 0);
+            setThongbao("Luot tiep theo:"+ (move % 2 === 0 ? "X" : "O"))
           }}
         >
           Di toi buoc #{move}
